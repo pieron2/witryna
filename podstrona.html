@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serwis komputerowy - Armenko-Fix</title>
+    <link rel="stylesheet" href="styl.css">
+    <link rel="icon" href="logo alfa.png">
+</head>
+<body>
+    
+<div id="baner">
+    <h1><img src="logo alfa.png" alt="logo" width="50px">Armenko Fix</h1>
+    </div>
+    
+    <div id="main">
+    <a href="strona.html">Strona Główna</a> | <a href="podstrona.html">Oferta</a>
+    </div>
+    
+    <center><div id="lewo">
+        <h2>Usługi świadczone przez firmę:</h2>
+            <ol>
+                <li>Diagnozowanie usterki</li>
+                <li>Naprawa podzespołu</li>
+                <li>Wymiana podzespołu na nowy</li>
+                <li>Czyszczenie obudowy</li>
+                <li>Instalacja systemu</li>
+                <li>Czyszczenie komputera z niepotrzebnych plików</li>
+            </ol>
+        Podaj numer usługi: <input type="number" id="usluga"><button id="przycisk">Wyslij</button>
+        <p id="wynik" style="border: solid 1px black; padding: 2px; background-color: white;"></p>
+    </div></center>
+    
+    <div id="stopka">
+        Strona wykonana przez: Kacper Krzewina
+    </div>
+
+    <script>
+        function oblicz()
+        {
+            var praca = document.getElementById("usluga").value;
+            var wynik = document.getElementById("wynik");
+            var cena = 0;
+            if (praca == 1) cena = 40;
+            if (praca == 2) cena = 100;
+            if (praca == 3) cena = 50;
+            if (praca == 4) cena = 20;
+            if (praca == 5) cena = 30;
+            if (praca == 6) cena = 20;
+            wynik.innerHTML = "<b>Koszt usługi: </b>" + cena + "zł oraz dodatkowe opłaty za ewentualne podzespoły";
+        }
+        document.getElementById("przycisk").addEventListener("click", oblicz);
+        </script>
+</body>
+</html>
